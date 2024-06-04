@@ -73,6 +73,7 @@ public class CarrinhoCompraService {
             throw new RuntimeException("CarrinhoCompra com o id "+id+" nao encontrada");
         }
         CarrinhoCompra carrinhoCompra = retorno.get();
+        itenCompra.calculaSubTotal();
         carrinhoCompra.addItemCarrinho(itenCompra);
         return carrinhoCompra;
     }
